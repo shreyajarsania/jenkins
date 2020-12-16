@@ -3,9 +3,7 @@ pipeline {
 
     stages {
         stage("build and test the project") {
-            agent {
-                docker "our-build-tools-image"
-            }
+            agent any
             stages {
                stage("build") {
                    steps {
@@ -29,9 +27,7 @@ pipeline {
             input {
                 message "Should we deploy the project?"
             }
-            agent {
-                docker "our-deploy-tools-image"
-            }
+            agent any
             steps {
                 sh "./deploy.sh"
             }
