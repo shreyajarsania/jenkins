@@ -16,11 +16,6 @@ pipeline {
                    }
                }
             }
-            post {
-                success {
-                	message "success"
-		}
-            }
         }
 
         stage("deploy the artifacts if a user confirms") {
