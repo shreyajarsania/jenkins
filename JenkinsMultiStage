@@ -18,7 +18,7 @@ pipeline {
             }
             post {
                 success {
-                    stash name: "artifacts", includes: "artifacts/**/*"
+                    stash name: "artifacts", includes: "./*"
                 }
             }
         }
