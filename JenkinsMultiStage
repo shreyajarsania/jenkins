@@ -18,8 +18,8 @@ pipeline {
             }
             post {
                 success {
-                    stash name: "artifacts", includes: "./*"
-                }
+                	message "success"
+		}
             }
         }
 
