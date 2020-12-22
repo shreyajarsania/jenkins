@@ -7,7 +7,6 @@ pipeline {
             }   sh 'echo "cloned"'
 
 	    }
-        }
 	stage('next'){
 	steps{
 		sh 'cd jenkins'
