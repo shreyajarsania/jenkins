@@ -3,12 +3,21 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "Hello World"'
-                sh '''
-                    echo "Multiline shell steps works too"
-                    ls -lah
-                '''
-            }
+                sh 'git clone https://github.com/shreyajarsania/jenkins.git'
+            }   sh 'echo "cloned"'
+
+	    }
         }
+	stage('next'){
+	steps{
+		sh 'cd jenkins'
+	    }	sh 'echo "entered"'
+	}
+	stage('deploy'){
+	steps{
+	   	sh 'python3 Python.py'
+		sh 'echo "done"'
+	   }
+	}
     }
 }
